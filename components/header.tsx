@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { GithubIcon, Menu, MoveRight, PaintBucket, X } from "lucide-react";
+import { GithubIcon, Menu, MoveRight, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export const Header = () => {
   const navigationItems = [
@@ -20,31 +21,16 @@ export const Header = () => {
     <header className="w-full z-40 fixed top-0 left-0 bg-background">
       <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
-          {navigationItems.map((item) => (
-            <Link key={item.title} href={item.href}>
-              <span className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-muted hover:text-muted-foreground h-10 px-4 py-2">
-                {item.title}
-              </span>
-            </Link>
-          ))}
+        <ModeToggle />
         </div>
         <div className="flex lg:justify-center">
-          <p className="font-semibold">TWBlocks.com</p>
+          <p className="font-semibold">Tranzit</p>
         </div>
         <div className="flex justify-end w-full gap-4">
           <Button
-            className="gap-2 hidden md:flex"
-            variant="outline"
-            onClick={() => {
-              window.open("https://ui.shadcn.com/themes", "_blank");
-            }}
-          >
-            shadcn Themes <PaintBucket className="w-4 h-4" />
-          </Button>
-          <Button
             className="gap-2"
             onClick={() => {
-              window.open("https://github.com/tommyjepsen/twblocks", "_blank");
+              window.open("https://github.com/Alioo11/tranzit", "_blank");
             }}
           >
             Github <GithubIcon className="w-4 h-4" />
