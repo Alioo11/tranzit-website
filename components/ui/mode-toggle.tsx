@@ -14,7 +14,7 @@ export function ModeToggle() {
     const transitioner = new Tranzit();
 
     transitioner.startTransition(() => {
-      const newTheme = theme === "dark" ? "light" : "dark";
+      const newTheme = theme === "light" ? "dark" : "light";
       setTheme(newTheme);
     });
   };
