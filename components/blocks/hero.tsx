@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 const background = "linear-gradient(to top left,#ff6e7f,#bfe9ff)"
 
 export const Hero = () => (
-  <div className="w-full">
+  <div className="w-full h-[100vh]">
     <div className="container mx-auto">
       <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
         <div>
@@ -14,7 +14,7 @@ export const Hero = () => (
         <div className="flex gap-4 flex-col">
           <h1
             style={{ background }}
-            className="inline-block text-center text-8xl font-black !bg-clip-text text-transparent !bg-cover !bg-center transition-all"
+            className="inline-block text-center text-7xl font-semibold !bg-clip-text text-transparent !bg-cover !bg-center transition-all"
           >
             Tranzit
           </h1>
